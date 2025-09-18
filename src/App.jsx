@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import HeroSection from "./components/HeroSection.jsx";
 import AboutSection from "./components/AboutSection.jsx";
+import MenuSection from "./components/MenuSection.jsx";
 
 function App(){
     return(
@@ -8,6 +9,7 @@ function App(){
             <Navbar/>
             <HeroSection/>
             <AboutSection/>
+            <MenuSection/>
         </>
     );
 }
