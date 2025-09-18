@@ -1,35 +1,35 @@
 /*
-* Description: Top navigation bar for quick scrolling to sections.
-Purpose: Helps users quickly access Menu, Hours, Contact, etc.
+* Description: Storytelling block about the café’s history and vibe.
+Purpose: Builds emotional connection with visitors.
 * */
-export default function Navbar(){
+export default function AboutSection(){
     return (
-        <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-sm shadow-md transition-all duration-300">
-            <nav className="container mx-auto flex items-center justify-between p-4">
-                {/* Logo */}
-                <a href="#" className="flex items-center space-x-2">
-                    {/* Placeholder Logo - you can replace this with your own <img> or <svg> */}
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-900" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 3.5a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0V4.25A.75.75 0 0110 3.5zM5.5 4.5a.75.75 0 01.75.75v10a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75zM14.5 4.5a.75.75 0 01.75.75v10a.75.75 0 01-1.5 0V5.25a.75.75 0 01.75-.75z" />
-                        <path fillRule="evenodd" d="M2.25 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75z" clipRule="evenodd" />
-                        <path fillRule="evenodd" d="M3 15.25a.75.75 0 01.75-.75h12.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-xl font-bold text-gray-800">The Coffee Spot</span>
-                </a>
-
-                {/* Desktop Navigation Links */}
-                <ul className="hidden md:flex items-center space-x-8">
-                    <li><a href="#menu" className="text-gray-700 font-semibold hover:text-amber-800 transition-colors duration-200">Menu</a></li>
-                    <li><a href="#hours" className="text-gray-700 font-semibold hover:text-amber-800 transition-colors duration-200">Hours</a></li>
-                    <li><a href="#about" className="text-gray-700 font-semibold hover:text-amber-800 transition-colors duration-200">About</a></li>
-                    <li><a href="#contact" className="text-gray-700 font-semibold hover:text-amber-800 transition-colors duration-200">Contact</a></li>
-                </ul>
-
-                {/* Mobile Menu Button (Hamburger Icon) */}
-                <div className="md:hidden">
-
+        <section id="about" className="py-16 md:py-24 bg-stone-50">
+            <div className="container mx-auto px-6 lg:px-8">
+                <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    {/* Image Column */}
+                    <div className="wow animate__animated animate__fadeInLeft">
+                        <img
+                            // You can replace this with your own image URL
+                            src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1974&auto=format&fit=crop"
+                            alt="Cozy interior of The Coffee Spot"
+                            className="rounded-lg shadow-xl w-full h-auto object-cover aspect-square"
+                        />
+                    </div>
+                    {/* Text Content Column */}
+                    <div className="wow animate__animated animate__fadeInRight">
+                        <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4 tracking-tight">
+                            Our Story
+                        </h2>
+                        <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+                            Founded in 2023, The Coffee Spot was born from a simple idea: to create a warm, inviting space where the community can gather over an exceptional cup of coffee. We believe that coffee is more than just a drink; it's a way to connect, to create, and to take a quiet moment for yourself.
+                        </p>
+                        <p className="text-gray-700 text-lg leading-relaxed">
+                            We partner with local roasters who share our passion for quality and sustainability. Every bean is ethically sourced and expertly roasted to bring out its unique flavors. From our classic espresso to our seasonal specialties, every sip tells a story of dedication and craft.
+                        </p>
+                    </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </section>
     );
 }
